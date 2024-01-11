@@ -11,6 +11,7 @@ Suivez ces étapes simples pour lancer l'image Docker :
 
 2. Utilisez la commande suivante pour télécharger l'image Docker depuis Docker Hub :
    ```bash
-   docker  ...
+   docker docker pull docsseo91/stardocker
+   docker run docsseo91/stardocker
    ```
 Oups, j'ai failli donner la réponse. Allez, go !
