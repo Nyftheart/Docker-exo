@@ -1,10 +1,10 @@
-
+# Utiliser l'image officielle de PostgreSQL depuis Docker Hub
 FROM postgres:latest
 
+# Copier le fichier db.sql dans le répertoire /docker-entrypoint-initdb.d/
+ADD db.sql /docker-entrypoint-initdb.d/
 
-ENV POSTGRES_DB=mydatabase \
-    POSTGRES_USER=myuser \
-    POSTGRES_PASSWORD=mypassword
-
-
-EXPOSE 5432
+# Définir les variables d'environnement pour PostgreSQL (le cas échéant)
+ENV POSTGRES_USER user
+ENV POSTGRES_PASSWORD password
+ENV POSTGRES_DB dbname

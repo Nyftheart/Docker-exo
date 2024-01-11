@@ -31,3 +31,15 @@ Trouver le nombre de personnes de plus de 30 ans.
 ````
 PS : merci d'utiliser ton cerveau et non ChatGPT.
 ````
+
+
+
+root@09a3629a9883:/# psql -d dbname -U user             
+psql (16.1 (Debian 16.1-1.pgdg120+1))
+Type "help" for help.
+
+dbname=# SELECT COUNT(*) FROM personnes WHERE age > 30;
+count
+-------
+    54
+(1 row)
