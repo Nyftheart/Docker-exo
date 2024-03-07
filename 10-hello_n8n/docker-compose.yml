@@ -1,0 +1,20 @@
+version: '3'
+services:
+  n8n:
+    image: n8nio/n8n
+    container_name: n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    volumes:
+      - ./n8n:/n8n
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=your_username
+      - N8N_BASIC_AUTH_PASSWORD=your_password
+      - N8N_ENCRYPTION_KEY=your_encryption_key
+      - N8N_EXECUTIONS_PROCESS_MAX_ACTIVE=5
+      - N8N_EXECUTIONS_PROCESS_MAX_WAITING=1000
+      - N8N_WEBHOOK_TUNNEL_ENABLED=true
+      - N8N_WEBHOOK_TUNNEL_URL=your_tunnel_url
+      - N8N_WEBHOOK_TUNNEL_TOKEN=your_tunnel_token

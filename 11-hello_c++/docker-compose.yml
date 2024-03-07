@@ -1,0 +1,10 @@
+version: '3'
+services:
+  cpp_app:
+    build: .
+    container_name: cpp_app
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
